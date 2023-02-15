@@ -13,16 +13,8 @@ npm install phishing-blocker
 
 ```
 const checkHostname = require('phishing-blocker');
-checkHostname(
-  [
-    "phishing-hunter.com",
-    "www.phishing-hunter.com",
-    "dev.phishing-hunter.com",
-    "demo.phishing-hunter.com",
-    "doc.phishing-hunter.com",
-    "localhost"
-  ],
-  "Phishing Scam Detected", true)
+var pattern = /^((www|dev)\.)?phishing-hunter\.com$/i;
+checkHostname(pattern, "Phishing Scam Detected", true)
 ```
 
 ## Demo

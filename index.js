@@ -1,10 +1,10 @@
-module.exports = function checkHostname(hostnames, message="Phishing Scam Detected", replace_html=false) {
+module.exports = function checkHostname(pattern, message="Phishing Scam Detected", replace_html=false) {
   let detect = true
-  for (const hostname of hostnames) {
-    if (hostname == window.location.hostname){
-      detect = false;
-      break;
-    }
+  if (pattern.test(window.location.hostname)){
+    detect = false;
+  }
+  if (window.location.hostname == 'localhost'){
+    detect = false;
   }
   if (detect){
     console.error(message + " " + window.location.hostname)
