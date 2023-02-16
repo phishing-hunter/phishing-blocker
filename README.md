@@ -7,7 +7,7 @@ npm install phishing-blocker
 
 ## USEAGE EXAMPLE
 
-* The first argument is a list of permitted FQDNs
+* The first argument is a regular expressions for allowed domains
 * The second argument is a message to be displayed if the first argument and the hostname do not match.
 * If the third argument is true, the HTML content is replaced by the second argument.
 

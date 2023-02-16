@@ -1,6 +1,6 @@
 {
   "name": "phishing-blocker",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Just install it to display an alert when the HTML code is copied to a phishing site.",
   "main": "index.js",
   "scripts": {
